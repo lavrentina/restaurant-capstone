@@ -4,9 +4,7 @@
 	--body-font: "Karla", sans-serif;
 	--heading-font: "Markazi Text", serif;
 	--h1-size: 64px;
-	/* --h1-height: 108px; */
 	--h2-size: 40px;
-	/* --h2-height: 65px; */
 	--h3-size: 20px;
 	--h4-size: 18px;
 	/* --h5-size: 28px;
@@ -19,10 +17,6 @@
 	--letter-spacing-lg: 12px;
 	--primary-button-size: 20px;
 	--secondary-button-size: 18px;
-	/* --text-shadow-dark: 1px 0 var(--primary-dark), -1px 0 var(--primary-dark),
-		0 1px var(--primary-dark), 0 -1px var(--primary-dark),
-		1px 1px var(--primary-dark), -1px -1px var(--primary-dark),
-		1px -1px var(--primary-dark), -1px 1px var(--primary-dark); */
 
 	/* SPACING VARIABLES*/
 	--spacing-sm: 8px;
@@ -38,10 +32,8 @@
 	--secondary-pale: #fbdabb;
 	--highlight-light: #edefee;
 	--highlight-dark: #333;
-	/* --bg-light: rgba(244, 207, 20, 0.45); */
 	--bg-dark: rgba(51, 51, 51, 0.35);
 
-	/* --primary-button-border: 2px solid #f4ce14; */
 	--border-radius-standard: 8px;
 	--box-shadow-standard: 0px 2px 40px rgba(0, 0, 0, 0.15);
 }
@@ -88,8 +80,8 @@ h4 {
 	font-family: var(--body-font);
 	font-weight: 600;
 	font-size: var(--h4-size);
-	margin: var(--spacing-md) 0;
 	letter-spacing: var(--letter-spacing-sm);
+	margin: var(--spacing-md) 0;
 }
 
 header {
@@ -108,6 +100,7 @@ main {
 	align-items: center;
 }
 
+/* LAYOUT STYLES */
 .section-container {
 	width: 100%;
 	max-width: var(--width-standard);
@@ -290,11 +283,12 @@ main {
 	color: var(--highlight-light);
 	font-size: var(--p-size);
 	line-height: var(--p-height);
+	margin: var(--spacing-lg) 0 var(--spacing-xl) 0;
 }
 
 /* SPECIALS SECTION */
 .specials {
-	margin: var(--spacing-xl) 0 calc(var(--spacing-xl) * 2) 0;
+	margin: var(--spacing-lg) 0 calc(var(--spacing-xl) * 2) 0;
 }
 
 .specials-wrapper {
@@ -366,7 +360,7 @@ main {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: var(--spacing-lg) 0 calc(var(--spacing-xl) * 3) 0;
+	padding: var(--spacing-lg) 0 calc(var(--spacing-xl) * 2) 0;
 }
 
 .testimonials-wrapper {
@@ -414,7 +408,6 @@ main {
 }
 
 /* ABOUT SECTION */
-
 .about {
 	box-sizing: border-box;
 	width: 100%;
@@ -462,25 +455,10 @@ footer {
 	padding: var(--spacing-xl) 0;
 }
 
-footer h3 {
-	color: var(--primary-light);
-}
-
-footer li,
-footer a {
-	color: var(--highlight-light);
-	line-height: var(--secondary-text-height);
-	margin: 0 0 var(--spacing-sm) 0;
-	display: block;
-}
-
-footer a {
-	text-decoration: none;
-	transition: all 0.25s ease;
-}
-
-footer a:hover {
-	text-decoration: underline;
+.footer-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
 }
 
 .contact {
@@ -488,8 +466,26 @@ footer a:hover {
 	padding: 0;
 }
 
-.footer-wrapper {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
+footer h3 {
+	color: var(--primary-light);
+}
+
+footer li {
+	color: var(--highlight-light);
+	line-height: var(--secondary-text-height);
+	margin: 0 0 var(--spacing-sm) 0;
+	display: block;
+}
+
+footer a {
+	color: var(--highlight-light);
+	line-height: var(--secondary-text-height);
+	margin: 0 0 var(--spacing-sm) 0;
+	display: block;
+	text-decoration: none;
+	transition: all 0.25s ease;
+}
+
+footer a:hover {
+	text-decoration: underline;
 }

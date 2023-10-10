@@ -33,7 +33,7 @@ const RatingCard = ({ image, description, grade }) => {
 			<h4>Rating</h4>
 			<div className="two-column">
 				<img src={image} className="col-left" />
-				<p className="col-right">{description}</p>
+				<p className="col-right secondary-text">{description}</p>
 			</div>
 			<span>{grade}</span>
 		</div>
