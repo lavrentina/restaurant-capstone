@@ -1,16 +1,36 @@
+import DishCards from "./DishCards";
+import Testimonials from "./Testimonials";
+import AboutSection from "./AboutSection";
+import restaurant from "../assets/restaurant.jpg";
+
 const Main = () => {
 	return (
 		<main>
-			<h2>Main Section</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-				veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-				commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-				velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-				occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				mollit anim id est laborum.
-			</p>
+			<section className="hero">
+				<div className="background">
+					<img src={restaurant} alt="restaurant" />
+				</div>
+				<div className="section-container hero-intro">
+					<h1>Little Lemon</h1>
+					<h2>Chicago</h2>
+					<p>
+						Little Lemon is a charming neigborhood bistro that serves simple
+						food and classic cocktails in a lively but casual environment. The
+						restaurant features a locally-sourced menu with daily specials.
+					</p>
+					<button className="primary-button">Reserve a table</button>
+				</div>
+			</section>
+
+			<section className="section-container specials">
+				<div className="specials-wrapper">
+					<h1>This Week's Specials!</h1>
+					<button className="primary-button">Online Menu</button>
+				</div>
+				<DishCards />
+			</section>
+			<Testimonials />
+			<AboutSection />
 		</main>
 	);
 };
