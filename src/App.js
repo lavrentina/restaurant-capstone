@@ -1,15 +1,15 @@
 import "./App.css";
-import Header from "./components/Header";
+import Nav from "./components/Nav";
 import Main from "./components/Main";
+import Menu from "./components/Menu";
 import Footer from "./components/Footer";
-import AppRouter from "./components/AppRouter";
 
 function App() {
 	return (
 		<>
-			<Header />
+			<Nav />
 			<Main />
-			<AppRouter />
+			<Menu />
 			<Footer />
 		</>
 	);

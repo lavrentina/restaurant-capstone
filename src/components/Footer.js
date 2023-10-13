@@ -11,18 +11,17 @@ const Footer = () => {
 					<ul className="contact">
 						<Link to="/">Home</Link>
 						<Link to="/about">About</Link>
-						<Link to="/menu">Menu</Link>
-						<Link to="/">Reservations</Link>
-						<Link to="/">Order Online</Link>
-						<Link to="/">Log In</Link>
+						<Link to="/reservations">Reservations</Link>
+						<Link to="/order-online">Order Online</Link>
+						<Link to="/login">Log In</Link>
 					</ul>
 				</nav>
 				<div>
 					<h3>Contact</h3>
 					<ul className="contact">
-						<li>ul. Przyokopowa,26 </li>
+						<li>str. Beautiful, 100 </li>
 						<li>+48 012 345 678</li>
-						<li>E-mail</li>
+						<li>email@company.com</li>
 					</ul>
 				</div>
 				<div>

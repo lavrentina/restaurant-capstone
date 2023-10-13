@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/Logo.svg";
 
-const Header = () => {
+const Nav = () => {
 	return (
 		<header>
 			<nav className="navbar">
@@ -9,7 +9,6 @@ const Header = () => {
 				<ul className="menu">
 					<Link to="/">Home</Link>
 					<Link to="/about">About</Link>
-					<Link to="/menu">Menu</Link>
 					<Link to="/reservations">Reservations</Link>
 					<Link to="/order-online">Order Online</Link>
 					<Link to="/login">Log In</Link>
@@ -19,4 +18,4 @@ const Header = () => {
 	);
 };
 
-export default Header;
+export default Nav;

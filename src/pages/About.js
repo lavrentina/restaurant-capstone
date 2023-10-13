@@ -1,17 +1,23 @@
+import cook from "../assets/cook.jpg";
+
 const About = () => {
 	return (
-		<>
-			<h1>About</h1>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-				veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-				commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-				velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-				occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				mollit anim id est laborum.
-			</p>
-		</>
+		<section className="about">
+			<div className="section-container two-column about-wrapper">
+				<div className="col-left">
+					<h1>Little Lemon</h1>
+					<h2>Chicago</h2>
+					<p>
+						Little Lemon is a charming neigborhood bistro that serves simple
+						food and classic cocktails in a lively but casual environment. The
+						restaurant features a locally-sourced menu with daily specials.
+					</p>
+				</div>
+				<div className="col-right">
+					<img src={cook} />
+				</div>
+			</div>
+		</section>
 	);
 };
 
