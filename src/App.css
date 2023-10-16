@@ -4,17 +4,21 @@
 	--body-font: "Karla", sans-serif;
 	--heading-font: "Markazi Text", serif;
 	--h1-size: 64px;
+	--h1-size-mobile: 50px;
 	--h2-size: 40px;
+	--h2-size-mobile: 30px;
 	--h3-size: 20px;
 	--h4-size: 18px;
-	/* --h5-size: 28px;
-	--h6-size: 22px; */
-	--p-size: 25px;
-	--p-height: 35px;
-	--secondary-text-size: 16px;
-	--secondary-text-height: 20px;
+
+	--p-size-lg: 25px;
+	--p-height-lg: 35px;
+	--p-size-md: 20px;
+	--p-height-md: 30px;
+	--p-size-sm: 16px;
+	--p-height-sm: 20px;
 	--letter-spacing-sm: 0.25px;
-	--letter-spacing-lg: 12px;
+	--letter-spacing-md: 12px;
+	--letter-spacing-lg: 18px;
 	--primary-button-size: 20px;
 	--secondary-button-size: 18px;
 
@@ -50,6 +54,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
+	overflow-x: hidden;
 }
 
 code {
@@ -120,6 +125,7 @@ main {
 	justify-content: center;
 	align-items: flex-start;
 	box-sizing: border-box;
+	flex-wrap: wrap;
 }
 
 .two-column > .col-left {
@@ -144,8 +150,8 @@ main {
 
 .secondary-text {
 	color: var(--primary-dark);
-	font-size: var(--secondary-text-size);
-	line-height: var(--secondary-text-height);
+	font-size: var(--p-size-sm);
+	line-height: var(--p-height-sm);
 	letter-spacing: var(--letter-spacing-sm);
 }
 
@@ -238,6 +244,10 @@ main {
 	border-radius: var(--border-radius-standard);
 }
 
+.hamburger-button {
+	display: none;
+}
+
 /* HERO SECTION */
 .hero {
 	width: 100%;
@@ -282,9 +292,10 @@ main {
 
 .hero p {
 	color: var(--highlight-light);
-	font-size: var(--p-size);
-	line-height: var(--p-height);
+	font-size: var(--p-size-lg);
+	line-height: var(--p-height-lg);
 	margin: var(--spacing-lg) 0 var(--spacing-xl) 0;
+	text-align: center;
 }
 
 /* SPECIALS SECTION */
@@ -297,6 +308,7 @@ main {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	box-sizing: border-box;
 }
 
 .dish-card {
@@ -332,12 +344,12 @@ main {
 .dish-card-heading span {
 	color: var(--secondary-bright);
 	font-weight: 600;
-	font-size: var(--secondary-text-size);
+	font-size: var(--p-size-sm);
 }
 
 .dish-card p {
 	text-align: justify;
-	line-height: var(--secondary-text-height);
+	line-height: var(--p-height-sm);
 	margin: var(--spacing-md) 0 var(--spacing-lg) 0;
 }
 
@@ -369,6 +381,7 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	box-sizing: border-box;
 }
 
 .rating-card {
@@ -391,12 +404,20 @@ main {
 
 .rating-card .two-column {
 	margin: 0 0 var(--spacing-md) 0;
+	box-sizing: border-box;
 }
 
 .rating-card span {
-	margin: auto 0 0 0;
-	letter-spacing: var(--letter-spacing-lg);
 	color: var(--primary-dark);
+}
+
+.rating-card span.grade-desktop {
+	margin: auto 0 0 0;
+	letter-spacing: var(--letter-spacing-md);
+}
+
+.rating-card span.grade-mobile {
+	display: none;
 }
 
 .rating-card p {
@@ -426,6 +447,7 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	box-sizing: border-box;
 }
 
 .about .col-left {
@@ -449,8 +471,8 @@ main {
 }
 
 .about p {
-	font-size: var(--p-size);
-	line-height: var(--p-height);
+	font-size: var(--p-size-lg);
+	line-height: var(--p-height-lg);
 	text-align: justify;
 }
 
@@ -464,6 +486,7 @@ main {
 	justify-content: center;
 	align-items: center;
 	padding: 0 0 var(--spacing-xl) 0;
+	box-sizing: border-box;
 }
 
 .reservations .two-column {
@@ -520,12 +543,27 @@ footer {
 	align-items: center;
 	justify-content: center;
 	padding: var(--spacing-xl) 0;
+	box-sizing: border-box;
 }
 
 .footer-wrapper {
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+}
+
+.footer-wrapper .col {
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	margin: 0 var(--spacing-md);
+}
+
+footer img {
+	width: 100%;
 }
 
 .contact {
@@ -539,14 +577,14 @@ footer h3 {
 
 footer li {
 	color: var(--highlight-light);
-	line-height: var(--secondary-text-height);
+	line-height: var(--p-height-sm);
 	margin: 0 0 var(--spacing-sm) 0;
 	display: block;
 }
 
 footer a {
 	color: var(--highlight-light);
-	line-height: var(--secondary-text-height);
+	line-height: var(--p-height-sm);
 	margin: 0 0 var(--spacing-sm) 0;
 	display: block;
 	text-decoration: none;
@@ -555,4 +593,346 @@ footer a {
 
 footer a:hover {
 	text-decoration: underline;
+}
+
+/* Desktop (Large) Breakpoint - 1200px */
+@media only screen and (max-width: 1200px) {
+	.navbar,
+	.hero-intro p,
+	.specials-wrapper,
+	.cards-container,
+	.footer-wrapper,
+	.about-wrapper {
+		padding: 0 var(--spacing-lg);
+	}
+
+	.testimonials-wrapper .cards-container {
+		flex-wrap: wrap;
+	}
+
+	.rating-card {
+		width: 48%;
+		margin: 0 0 var(--spacing-lg) 0;
+	}
+
+	.rating-card h4 {
+		font-size: var(--h3-size);
+	}
+
+	.rating-card img {
+		max-height: 200px;
+	}
+
+	.rating-card .col-right {
+		height: 100%;
+		justify-content: space-between;
+	}
+
+	.rating-card p {
+		font-size: var(--p-size-md);
+		line-height: var(--p-height-md);
+	}
+
+	.rating-card span.grade-desktop {
+		display: none;
+	}
+
+	.rating-card span.grade-mobile {
+		display: flex;
+		letter-spacing: var(--letter-spacing-lg);
+		font-size: var(--p-size-lg);
+	}
+
+	.reservations {
+		padding: 0 var(--spacing-lg) var(--spacing-xl) var(--spacing-lg);
+	}
+}
+
+/* Desktop (Small) Breakpoint - 955px */
+@media only screen and (max-width: 955px) {
+	.background img {
+		height: 90vh;
+	}
+
+	footer {
+		padding: var(--spacing-xl) 0 0 0;
+	}
+
+	footer img {
+		max-width: 200px;
+	}
+
+	.footer-wrapper {
+		justify-content: center;
+	}
+
+	.footer-wrapper .col {
+		width: 40%;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		margin: 0 0 var(--spacing-lg) 0;
+	}
+}
+
+/* Desktop (Small) Breakpoint - 930px */
+@media only screen and (max-width: 930px) {
+	.menu {
+		margin: 0 0 0 var(--spacing-xl);
+	}
+
+	.menu a {
+		font-size: var(--h4-size);
+		padding: var(--spacing-sm);
+	}
+
+	.hero-intro p {
+		font-size: var(--p-size-md);
+		line-height: var(--p-height-md);
+	}
+
+	.dish-card {
+		width: 32%;
+	}
+
+	.dish-card-heading {
+		flex-direction: column;
+		align-items: flex-start;
+		margin: var(--spacing-md) 0;
+	}
+
+	.testimonials {
+		padding: var(--spacing-md) 0 var(--spacing-xl) 0;
+	}
+
+	.rating-card img {
+		width: 100%;
+	}
+
+	.rating-card span.grade-mobile {
+		letter-spacing: var(--letter-spacing-md);
+	}
+
+	.about .col-left {
+		padding-right: var(--spacing-lg);
+	}
+
+	.about p {
+		font-size: var(--p-size-md);
+		line-height: var(--p-height-md);
+	}
+}
+
+/* Desktop (Small) Breakpoint - 835px */
+@media only screen and (max-width: 835px) {
+	.menu {
+		display: none;
+	}
+
+	.specials {
+		margin: var(--spacing-lg) 0;
+	}
+
+	.specials h1,
+	.testimonials h1 {
+		margin: var(--spacing-lg) 0;
+	}
+
+	.cards-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.dish-card {
+		width: 85%;
+		margin: 0 0 var(--spacing-lg) 0;
+	}
+
+	.dish-card-heading {
+		flex-direction: row;
+		margin: var(--spacing-lg) 0;
+	}
+
+	.rating-card {
+		width: 75%;
+		padding: var(--spacing-md) var(--spacing-lg) var(--spacing-lg)
+			var(--spacing-lg);
+	}
+
+	.rating-card .col-right {
+		height: 200px;
+		padding: 0 0 0 var(--spacing-md);
+	}
+}
+
+/* Tablet Breakpoint - 750px */
+@media only screen and (max-width: 750px) {
+	h1 {
+		font-size: var(--h1-size-mobile);
+	}
+
+	h2 {
+		font-size: var(--h2-size-mobile);
+	}
+
+	.hero-intro p {
+		font-size: var(--p-size-sm);
+		line-height: var(--p-height-md);
+		width: 85%;
+	}
+
+	.about .col-left {
+		padding: 0 var(--spacing-lg) 0 0;
+	}
+
+	.about h1 {
+		margin: var(--spacing-xl) 0 0 0;
+	}
+
+	.about p {
+		font-size: var(--p-size-sm);
+		line-height: var(--p-height-md);
+	}
+
+	.primary-button {
+		font-size: var(--secondary-button-size);
+	}
+
+	.reservations input[type="date"],
+	.reservations input[type="number"],
+	.reservations select {
+		height: 50px;
+	}
+
+	.reservations .two-column {
+		margin: 0 0 var(--spacing-md) 0;
+	}
+
+	.reservations .col-left,
+	.reservations .col-right {
+		width: 100%;
+		padding: 0;
+		margin: 0 0 var(--spacing-md) 0;
+	}
+}
+
+/* Tablet Breakpoint - 645px */
+@media only screen and (max-width: 645px) {
+	.hero-intro {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.hero-intro .primary-button {
+		width: 85%;
+	}
+
+	.specials {
+		margin: var(--spacing-md) 0;
+	}
+
+	.specials-wrapper {
+		flex-direction: column;
+		margin: 0 0 var(--spacing-lg) 0;
+	}
+
+	.specials-wrapper .primary-button,
+	.dish-card,
+	.rating-card,
+	.about .col-left {
+		width: 100%;
+	}
+
+	.about img {
+		display: none;
+	}
+}
+
+/* Tablet Breakpoint - 580px */
+@media only screen and (max-width: 580px) {
+	.hero-intro p {
+		text-align: justify;
+	}
+
+	.rating-card img {
+		max-height: 170px;
+	}
+
+	.rating-card .col-right {
+		height: 170px;
+	}
+
+	.rating-card p {
+		font-size: var(--p-size-sm);
+		line-height: var(--p-height-md);
+	}
+}
+
+/* Tablet Breakpoint - 540px */
+@media only screen and (max-width: 540px) {
+	.rating-card img {
+		max-height: 150px;
+	}
+
+	.rating-card span.grade-mobile {
+		display: none;
+	}
+
+	.rating-card span.grade-desktop {
+		display: flex;
+		letter-spacing: var(--letter-spacing-lg);
+		font-size: var(--p-size-lg);
+	}
+
+	.confirm h1 {
+		text-align: center;
+	}
+}
+
+/* Mobile Breakpoint - 520px */
+@media only screen and (max-width: 520px) {
+	footer {
+		padding: var(--spacing-lg) 0 0 0;
+	}
+
+	footer img {
+		display: none;
+	}
+
+	.footer-wrapper .col {
+		width: 100%;
+	}
+}
+
+/* Mobile Breakpoint - 445px */
+@media only screen and (max-width: 445px) {
+	.specials h1,
+	.confirm h1 {
+		font-size: var(--h2-size);
+	}
+
+	.testimonials {
+		padding: var(--spacing-md) 0 var(--spacing-lg) 0;
+	}
+
+	.specials-wrapper,
+	.cards-container,
+	.footer-wrapper,
+	.about-wrapper {
+		padding: 0 var(--spacing-md);
+	}
+}
+
+/* Mobile Breakpoint - 400px */
+@media only screen and (max-width: 400px) {
+	.rating-card {
+		padding: var(--spacing-md);
+	}
+
+	.specials-wrapper,
+	.cards-container,
+	.footer-wrapper,
+	.about-wrapper {
+		padding: 0 var(--spacing-sm);
+	}
 }

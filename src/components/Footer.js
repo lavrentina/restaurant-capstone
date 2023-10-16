@@ -5,8 +5,10 @@ const Footer = () => {
 	return (
 		<footer>
 			<div className="section-container footer-wrapper">
-				<img src={logo} alt="Little Lemon logo" />
-				<nav>
+				<div className="col">
+					<img src={logo} alt="Little Lemon logo" />
+				</div>
+				<div className="col">
 					<h3>Navigation</h3>
 					<ul className="contact">
 						<Link to="/">Home</Link>
@@ -15,8 +17,8 @@ const Footer = () => {
 						<Link to="/order-online">Order Online</Link>
 						<Link to="/login">Log In</Link>
 					</ul>
-				</nav>
-				<div>
+				</div>
+				<div className="col">
 					<h3>Contact</h3>
 					<ul className="contact">
 						<li>str. Beautiful, 100 </li>
@@ -24,7 +26,7 @@ const Footer = () => {
 						<li>email@company.com</li>
 					</ul>
 				</div>
-				<div>
+				<div className="col">
 					<h3>Social Media Links</h3>
 					<ul className="contact">
 						<li>

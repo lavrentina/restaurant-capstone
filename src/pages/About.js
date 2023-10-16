@@ -14,7 +14,7 @@ const About = () => {
 					</p>
 				</div>
 				<div className="col-right">
-					<img src={cook} />
+					<img src={cook} alt="cook" />
 				</div>
 			</div>
 		</section>

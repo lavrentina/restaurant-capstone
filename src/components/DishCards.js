@@ -30,7 +30,7 @@ const dishes = [
 const DishCard = ({ title, price, description, image }) => {
 	return (
 		<div className="dish-card">
-			<img src={image} />
+			<img src={image} alt="dish" />
 			<div className="dish-card-text">
 				<div className="dish-card-heading">
 					<h4>{title}</h4>
@@ -40,7 +40,7 @@ const DishCard = ({ title, price, description, image }) => {
 			</div>
 			<button className="secondary-button with-icon">
 				Order a delivery
-				<img src={icon} />
+				<img src={icon} alt="motorcycle icon" />
 			</button>
 		</div>
 	);

@@ -32,10 +32,13 @@ const RatingCard = ({ image, description, grade }) => {
 		<div className="rating-card">
 			<h4>Rating</h4>
 			<div className="two-column">
-				<img src={image} className="col-left" />
-				<p className="col-right secondary-text">{description}</p>
+				<img src={image} className="col-left" alt="dish" />
+				<div className="col-right">
+					<p className="secondary-text">{description}</p>
+					<span className="grade-mobile">{grade}</span>
+				</div>
 			</div>
-			<span>{grade}</span>
+			<span className="grade-desktop">{grade}</span>
 		</div>
 	);
 };
