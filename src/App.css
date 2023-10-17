@@ -222,7 +222,6 @@ main {
 	width: 100%;
 	margin: 0 0 0 calc(var(--spacing-xl) * 2);
 	padding: 0;
-	list-style: none;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -244,7 +243,8 @@ main {
 	border-radius: var(--border-radius-standard);
 }
 
-.hamburger-button {
+/* NAV - HAMBURGER BUTTON */
+.hamburger {
 	display: none;
 }
 
@@ -725,8 +725,60 @@ footer a:hover {
 
 /* Desktop (Small) Breakpoint - 835px */
 @media only screen and (max-width: 835px) {
+	/* Mobile Navbar */
 	.menu {
 		display: none;
+	}
+
+	.hamburger {
+		width: 2rem;
+		height: 2rem;
+		display: flex;
+		justify-content: space-around;
+		flex-flow: column nowrap;
+		z-index: 10;
+	}
+
+	.hamburger:hover {
+		cursor: pointer;
+	}
+
+	.burger {
+		width: 2rem;
+		height: 0.25rem;
+		border-radius: 10px;
+		background-color: var(--primary-dark);
+		transform-origin: 1px;
+		transition: all 0.3s linear;
+	}
+
+	.mobile-nav {
+		box-sizing: border-box;
+		margin: 0;
+		padding: calc(var(--spacing-xl) * 2) 0;
+		background-color: var(--highlight-light);
+		height: 100vh;
+		width: 40vw;
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 6;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.mobile-nav a {
+		font-family: var(--body-font);
+		font-size: var(--h3-size);
+		font-weight: 700;
+		color: var(--primary-dark);
+		text-decoration: none;
+	}
+
+	.mobile-nav a:hover {
+		text-decoration: underline;
 	}
 
 	.specials {
@@ -798,6 +850,10 @@ footer a:hover {
 		font-size: var(--secondary-button-size);
 	}
 
+	.reservations {
+		padding: 0 var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
+	}
+
 	.reservations input[type="date"],
 	.reservations input[type="number"],
 	.reservations select {
@@ -805,7 +861,7 @@ footer a:hover {
 	}
 
 	.reservations .two-column {
-		margin: 0 0 var(--spacing-md) 0;
+		margin: 0;
 	}
 
 	.reservations .col-left,
@@ -813,6 +869,10 @@ footer a:hover {
 		width: 100%;
 		padding: 0;
 		margin: 0 0 var(--spacing-md) 0;
+	}
+
+	.reservations .primary-button {
+		margin: var(--spacing-md) 0 0 0;
 	}
 }
 
@@ -850,6 +910,10 @@ footer a:hover {
 
 /* Tablet Breakpoint - 580px */
 @media only screen and (max-width: 580px) {
+	.mobile-nav {
+		width: 50vw;
+	}
+
 	.hero-intro p {
 		text-align: justify;
 	}
@@ -891,6 +955,10 @@ footer a:hover {
 
 /* Mobile Breakpoint - 520px */
 @media only screen and (max-width: 520px) {
+	.mobile-nav {
+		width: 105vw;
+	}
+
 	footer {
 		padding: var(--spacing-lg) 0 0 0;
 	}
